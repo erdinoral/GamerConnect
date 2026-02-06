@@ -1,0 +1,143 @@
+.popular-lobbies {
+  padding: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.lobby-count {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.lobbies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lobby-card {
+  padding: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.lobby-card:hover {
+  background: rgba(176, 38, 255, 0.1);
+  border-color: var(--neon-purple);
+  transform: translateX(5px);
+}
+
+.lobby-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tag-sponsored {
+  background: rgba(255, 215, 0, 0.2);
+  border: 1px solid var(--neon-gold);
+  color: var(--neon-gold);
+}
+
+.tag-squad {
+  background: rgba(176, 38, 255, 0.2);
+  border: 1px solid var(--neon-purple);
+  color: var(--neon-purple);
+}
+
+.tag-duo {
+  background: rgba(0, 212, 255, 0.2);
+  border: 1px solid var(--neon-blue);
+  color: var(--neon-blue);
+}
+
+.tag-mic {
+  background: rgba(0, 255, 0, 0.2);
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+}
+
+.tag-tüm-ranklar,
+.tag-global-elite,
+.tag-faceit-8,
+.tag-gold {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+}
+
+.lobby-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.lobby-description {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.lobby-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lobby-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.lobby-game {
+  color: var(--neon-blue);
+  font-weight: 600;
+}
+
+.lobby-members {
+  color: var(--neon-green);
+}
+
+.btn-join {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--gradient-blue);
+  border: none;
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-join:hover {
+  transform: translateX(3px);
+}

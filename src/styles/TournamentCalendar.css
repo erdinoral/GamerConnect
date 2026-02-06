@@ -1,0 +1,185 @@
+.tournament-calendar-page {
+  min-height: 100vh;
+  background: #000000;
+}
+
+.calendar-header {
+  margin-bottom: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab:hover {
+  color: white;
+}
+
+.tab.active {
+  color: var(--neon-purple);
+  border-bottom-color: var(--neon-purple);
+}
+
+.tournaments-list,
+.patches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tournament-card,
+.patch-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+
+.tournament-card:hover,
+.patch-card:hover {
+  border-color: rgba(176, 38, 255, 0.5);
+  box-shadow: 0 0 20px rgba(176, 38, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.tournament-header,
+.patch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.tournament-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.tournament-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.tournament-game {
+  color: var(--neon-cyan);
+}
+
+.tournament-type {
+  color: var(--neon-gold);
+}
+
+.live-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  color: #ff0000;
+  font-size: 0.75rem;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.tournament-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(176, 38, 255, 0.1);
+  border: 1px solid rgba(176, 38, 255, 0.3);
+  border-radius: 0.5rem;
+  color: var(--neon-purple);
+  font-weight: 600;
+}
+
+.patch-game {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.patch-version {
+  color: var(--neon-cyan);
+  font-size: 0.9rem;
+}
+
+.patch-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.patch-status.released {
+  background: rgba(0, 255, 0, 0.2);
+  border: 1px solid rgba(0, 255, 0, 0.5);
+  color: #00ff00;
+}
+
+.patch-status.upcoming {
+  background: rgba(255, 215, 0, 0.2);
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  color: var(--neon-gold);
+}
+
+.patch-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tournament-header,
+  .patch-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

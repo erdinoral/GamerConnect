@@ -1,0 +1,27 @@
+.back-btn {
+  position: fixed;
+  top: 100px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  color: var(--neon-blue);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: rgba(0, 212, 255, 0.1);
+  transform: translateX(-5px);
+}
+
+.back-btn svg {
+  color: var(--neon-blue);
+}

@@ -1,0 +1,134 @@
+.home-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+/* Stream Player Wrapper */
+.stream-player-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Game Selector */
+.game-selector {
+  margin-top: 24px;
+}
+
+.game-selector-btn {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px 24px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.game-selector-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-selector-btn.active {
+  border-color: var(--neon-cyan);
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Tab Buttons */
+.tab-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Event Cards */
+.event-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Tournament Cards */
+.tournament-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.tournament-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Live Badge Animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 0, 64, 0.5);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 20px rgba(255, 0, 64, 0.8);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .game-selector-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stream-player-wrapper {
+    padding-bottom: 56.25%;
+  }
+
+  .game-selector {
+    margin-top: 16px;
+  }
+
+  .game-selector-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .tab-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .event-card,
+  .tournament-card {
+    padding: 16px;
+  }
+}

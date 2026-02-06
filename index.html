@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gamer Hub - Oyun yama notları, canlı yayınlar, lobi sistemi, rehberler ve oyun istatistikleri. Oyun topluluğunun merkezi.">
+    <meta name="keywords" content="oyun, gaming, patch notes, twitch, lobi, rehber, istatistik, espor">
+    <meta name="author" content="Gamer Hub">
+    <title>Gamer Hub - Oyun Platformu | Patch Notes, Canlı Yayınlar, Lobi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-gamepad"></i>
+                <span>Gamer Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Ana Sayfa</a></li>
+                <li><a href="lobby.html" class="nav-link">Lobi & Forum</a></li>
+                <li><a href="guides.html" class="nav-link">Rehberler</a></li>
+                <li><a href="news.html" class="nav-link">Haberler</a></li>
+                <li><a href="stats.html" class="nav-link">İstatistikler</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Oyun ara...">
+                </div>
+                <button class="btn-primary" id="loginBtn">
+                    <i class="fas fa-user"></i> Giriş Yap
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Patch Notes & Events Banner -->
+    <section class="patch-banner">
+        <div class="container">
+            <div class="patch-content">
+                <div class="patch-item">
+                    <i class="fas fa-download"></i>
+                    <div>
+                        <h3>Yeni Yama: v2.4.1</h3>
+                        <p>Yeni karakterler ve denge güncellemeleri</p>
+                        <span class="patch-date">2 saat önce</span>
+                    </div>
+                </div>
+                <div class="patch-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <h3>Aktif Etkinlik</h3>
+                        <p>Hafta Sonu Turnuvası - Ödül Havuzu: 50,000₺</p>
+                        <span class="patch-date">Son 3 gün</span>
+                    </div>
+                </div>
+                <div class="patch-item">
+                    <i class="fas fa-fire"></i>
+                    <div>
+                        <h3>Hotfix: v2.4.0.1</h3>
+                        <p>Kritik bug düzeltmeleri ve performans iyileştirmeleri</p>
+                        <span class="patch-date">5 saat önce</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="mesh-gradient-1"></div>
+        <div class="mesh-gradient-2"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Oyun Dünyasına Hoş Geldiniz</h1>
+            <p class="hero-subtitle">Binlerce oyunu keşfedin, oynayın ve paylaşın</p>
+            <div class="hero-buttons">
+                <button class="btn-hero btn-primary">Oyunları Keşfet</button>
+                <button class="btn-hero btn-secondary">Popüler Oyunlar</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="floating-card">
+                <i class="fas fa-trophy"></i>
+                <span>En Popüler</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Arena Section -->
+    <section id="live-arena" class="section live-arena-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-broadcast-tower"></i> Canlı Yayınlar</h2>
+            </div>
+            <div class="twitch-grid" id="twitchGrid">
+                <!-- Twitch streams will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Banner -->
+    <div class="ad-banner neon-border">
+        <div class="container">
+            <div class="ad-content">
+                <span class="ad-label">Reklam</span>
+                <p>Premium oyun deneyimi için sponsorlarımızı keşfedin</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Games -->
+    <section id="games" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Öne Çıkan Oyunlar</h2>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">Tümü</button>
+                    <button class="filter-tab" data-filter="action">Aksiyon</button>
+                    <button class="filter-tab" data-filter="adventure">Macera</button>
+                    <button class="filter-tab" data-filter="strategy">Strateji</button>
+                    <button class="filter-tab" data-filter="sports">Spor</button>
+                </div>
+            </div>
+            <div class="games-grid" id="gamesGrid">
+                <!-- Games will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="section categories-section">
+        <div class="container">
+            <h2 class="section-title">Kategoriler</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="action">
+                    <i class="fas fa-fist-raised"></i>
+                    <h3>Aksiyon</h3>
+                    <p>Hızlı tempolu aksiyon oyunları</p>
+                </div>
+                <div class="category-card" data-category="adventure">
+                    <i class="fas fa-mountain"></i>
+                    <h3>Macera</h3>
+                    <p>Epik macera hikayeleri</p>
+                </div>
+                <div class="category-card" data-category="strategy">
+                    <i class="fas fa-chess"></i>
+                    <h3>Strateji</h3>
+                    <p>Zeka ve strateji oyunları</p>
+                </div>
+                <div class="category-card" data-category="sports">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Spor</h3>
+                    <p>Gerçekçi spor simülasyonları</p>
+                </div>
+                <div class="category-card" data-category="racing">
+                    <i class="fas fa-car"></i>
+                    <h3>Yarış</h3>
+                    <p>Hızlı yarış oyunları</p>
+                </div>
+                <div class="category-card" data-category="puzzle">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Bulmaca</h3>
+                    <p>Zeka geliştirici bulmacalar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2>Gamer Hub Hakkında</h2>
+                <p>Gamer Hub, oyun severler için tasarlanmış modern bir platformdur. Binlerce oyunu keşfedin, favorilerinizi oynayın ve oyun topluluğuna katılın.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Geniş Oyun Kütüphanesi</h3>
+                        <p>Yüzlerce farklı kategoride oyun</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h3>Aktif Topluluk</h3>
+                        <p>Milyonlarca oyuncu ile bağlantı kurun</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-star"></i>
+                        <h3>Öneri Sistemi</h3>
+                        <p>Size özel oyun önerileri</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gamer Hub</h3>
+                    <p>Oyun dünyasının merkezi</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="#home">Ana Sayfa</a></li>
+                        <li><a href="#games">Oyunlar</a></li>
+                        <li><a href="#categories">Kategoriler</a></li>
+                        <li><a href="#about">Hakkında</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Destek</h4>
+                    <ul>
+                        <li><a href="#">Yardım Merkezi</a></li>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Yatırımcılar</h4>
+                    <ul>
+                        <li><a href="investors.html">Yatırımcı Paneli</a></li>
+                        <li><a href="#" id="donateBtn">Bağış Yap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gamer Hub. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody">
+                <!-- Game details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Required Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="login-prompt">
+                <i class="fas fa-lock"></i>
+                <h2>Giriş Gerekli</h2>
+                <p>Bu işlemi gerçekleştirmek için lütfen giriş yapın.</p>
+                <button class="btn-primary" onclick="showLoginForm()">
+                    <i class="fas fa-sign-in-alt"></i> Giriş Yap
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donate Button (Fixed) -->
+    <button class="donate-btn neon-gold" id="donateBtnFixed">
+        <i class="fas fa-heart"></i> Bağış Yap
+    </button>
+
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

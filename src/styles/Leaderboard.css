@@ -1,0 +1,49 @@
+/* Leaderboard specific styles */
+.leaderboard-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+/* Table row hover effect */
+tbody tr:hover {
+  background: rgba(0, 212, 255, 0.05) !important;
+}
+
+/* Top 3 glow effects */
+@keyframes gold-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 1));
+  }
+}
+
+@keyframes silver-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(192, 192, 192, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(192, 192, 192, 1));
+  }
+}
+
+@keyframes bronze-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(217, 119, 6, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(217, 119, 6, 1));
+  }
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+  
+  th, td {
+    padding: 12px 8px !important;
+  }
+}

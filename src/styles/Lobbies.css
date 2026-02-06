@@ -1,0 +1,107 @@
+.lobbies-page {
+  min-height: 100vh;
+  background: #050505;
+}
+
+.lobbies-header {
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.game-card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.game-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(176, 38, 255, 0.3);
+}
+
+.game-card:hover::before {
+  opacity: 1;
+  border-color: inherit;
+  box-shadow: 0 0 20px currentColor;
+}
+
+.game-icon-large {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icon-emoji {
+  font-size: 3rem;
+}
+
+.game-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.game-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s;
+}
+
+.game-card:hover .game-arrow {
+  background: rgba(176, 38, 255, 0.2);
+  border-color: #b026ff;
+  color: #b026ff;
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+}

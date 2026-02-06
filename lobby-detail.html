@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobi Detay - Gamer Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-gamepad"></i>
+                <span>Gamer Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="lobby.html" class="nav-link">Lobi & Forum</a></li>
+                <li><a href="guides.html" class="nav-link">Rehberler</a></li>
+                <li><a href="news.html" class="nav-link">Haberler</a></li>
+                <li><a href="stats.html" class="nav-link">İstatistikler</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-primary" id="loginBtn">
+                    <i class="fas fa-user"></i> Giriş Yap
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container" style="margin-top: 80px; padding: 40px 20px;">
+        <div class="container">
+            <div class="lobby-detail-header">
+                <div>
+                    <h1 id="lobbyTitle">Valorant Duo Lobi</h1>
+                    <p id="lobbyDescription">Diamond rank, takım oyunu odaklı oyuncu arıyorum.</p>
+                </div>
+                <div class="lobby-actions">
+                    <button class="btn-primary" id="voiceToggle">
+                        <i class="fas fa-microphone"></i> Sesli Sohbet
+                    </button>
+                </div>
+            </div>
+
+            <div class="lobby-detail-layout">
+                <!-- Members Panel -->
+                <aside class="members-panel">
+                    <h3><i class="fas fa-users"></i> Üyeler (2/2)</h3>
+                    <div class="members-list" id="membersList">
+                        <!-- Members will be loaded here -->
+                    </div>
+                </aside>
+
+                <!-- Chat Panel -->
+                <main class="chat-panel">
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- Messages will be loaded here -->
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chatInput" placeholder="Mesaj yazın..." onkeypress="handleChatKeyPress(event)">
+                        <button class="btn-primary" onclick="sendMessage()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </main>
+
+                <!-- Voice Panel -->
+                <aside class="voice-panel" id="voicePanel" style="display: none;">
+                    <h3><i class="fas fa-microphone-alt"></i> Sesli Sohbet</h3>
+                    <div class="voice-controls">
+                        <button class="voice-btn active" id="micBtn">
+                            <i class="fas fa-microphone"></i> Mikrofon Açık
+                        </button>
+                        <button class="voice-btn" id="speakerBtn">
+                            <i class="fas fa-volume-up"></i> Hoparlör Açık
+                        </button>
+                    </div>
+                    <div class="voice-participants" id="voiceParticipants">
+                        <!-- Voice participants will be shown here -->
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="lobby-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Phonk Color Palette - Deeper Black */
+  --bg-primary: #050505;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #0f0f0f;
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(15, 15, 26, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(20px);
+  
+  /* Neon Colors - 50% Reduced Brightness */
+  --neon-blue: #006a7f;
+  --neon-purple: #58137f;
+  --neon-cyan: #007f7f;
+  --neon-pink: #7f007f;
+  --neon-gold: #7f6b00;
+  --neon-green: #007f00;
+  --neon-red: #7f0020;
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0b0;
+  --text-muted: #6a6a7a;
+  
+  /* Gradients */
+  --gradient-blue: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  --gradient-purple: linear-gradient(135deg, #b026ff 0%, #7a1fb8 100%);
+  --gradient-gold: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%);
+  
+  /* Shadows */
+  --shadow-neon-blue: 0 0 20px rgba(0, 212, 255, 0.5),
+                      0 0 40px rgba(0, 212, 255, 0.3),
+                      0 0 60px rgba(0, 212, 255, 0.2);
+  --shadow-neon-purple: 0 0 20px rgba(176, 38, 255, 0.5),
+                        0 0 40px rgba(176, 38, 255, 0.3),
+                        0 0 60px rgba(176, 38, 255, 0.2);
+  --shadow-neon-gold: 0 0 20px rgba(255, 215, 0, 0.5),
+                      0 0 40px rgba(255, 215, 0, 0.3),
+                      0 0 60px rgba(255, 215, 0, 0.2);
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-weight: 500; /* Medium font weight for better readability */
+}
+
+/* Base font weights */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; /* Semibold for headings */
+}
+
+p, span, div {
+  font-weight: 500; /* Medium for body text */
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+/* Border Neon Glow - Only on borders, not text */
+.border-neon-cyan {
+  border-color: var(--neon-cyan) !important;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3) inset, 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.border-neon-purple {
+  border-color: var(--neon-purple) !important;
+  box-shadow: 0 0 10px rgba(176, 38, 255, 0.3) inset, 0 0 20px rgba(176, 38, 255, 0.2);
+}
+
+.border-neon-gold {
+  border-color: var(--neon-gold) !important;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3) inset, 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.border-neon-blue {
+  border-color: var(--neon-blue) !important;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3) inset, 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+/* Neon Glow Utility */
+.neon-glow-blue {
+  box-shadow: var(--shadow-neon-blue);
+}
+
+.neon-glow-purple {
+  box-shadow: var(--shadow-neon-purple);
+}
+
+.neon-glow-gold {
+  box-shadow: var(--shadow-neon-gold);
+}
+
+/* Text Neon Glow */
+.text-neon-blue {
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.8),
+               0 0 20px rgba(0, 212, 255, 0.6),
+               0 0 30px rgba(0, 212, 255, 0.4);
+}
+
+.text-neon-purple {
+  text-shadow: 0 0 10px rgba(176, 38, 255, 0.8),
+               0 0 20px rgba(176, 38, 255, 0.6),
+               0 0 30px rgba(176, 38, 255, 0.4);
+}
+
+.text-neon-gold {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8),
+               0 0 20px rgba(255, 215, 0, 0.6),
+               0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+.text-neon-cyan {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8),
+               0 0 20px rgba(0, 255, 255, 0.6),
+               0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+.text-neon-pink {
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.8),
+               0 0 20px rgba(255, 0, 255, 0.6),
+               0 0 30px rgba(255, 0, 255, 0.4);
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-purple);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}

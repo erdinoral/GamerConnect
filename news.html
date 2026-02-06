@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gamer Hub Haberler - E-spor haberleri, Steam ve Epic mağaza güncellemeleri">
+    <title>Haberler - Gamer Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-gamepad"></i>
+                <span>Gamer Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="lobby.html" class="nav-link">Lobi & Forum</a></li>
+                <li><a href="guides.html" class="nav-link">Rehberler</a></li>
+                <li><a href="news.html" class="nav-link active">Haberler</a></li>
+                <li><a href="stats.html" class="nav-link">İstatistikler</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-primary" id="loginBtn">
+                    <i class="fas fa-user"></i> Giriş Yap
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container" style="margin-top: 80px; padding: 40px 20px;">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-newspaper"></i> Haberler & Güncellemeler</h1>
+                <p>E-spor dünyasından ve oyun mağazalarından son haberler</p>
+            </div>
+
+            <div class="news-layout">
+                <aside class="sidebar-left">
+                    <div class="ad-banner neon-border" style="height: 300px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <div class="ad-content">
+                            <span class="ad-label">Reklam</span>
+                            <p>300x300 Reklam</p>
+                        </div>
+                    </div>
+                </aside>
+
+                <main class="news-main">
+                    <div class="news-tabs">
+                        <button class="news-tab active" data-tab="esports">E-Spor</button>
+                        <button class="news-tab" data-tab="steam">Steam</button>
+                        <button class="news-tab" data-tab="epic">Epic Games</button>
+                    </div>
+
+                    <div class="news-list" id="newsList">
+                        <!-- News will be loaded here -->
+                    </div>
+                </main>
+
+                <aside class="sidebar-right">
+                    <div class="ad-banner neon-border" style="height: 300px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <div class="ad-content">
+                            <span class="ad-label">Reklam</span>
+                            <p>300x300 Reklam</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="news.js"></script>
+</body>
+</html>

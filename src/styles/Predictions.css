@@ -1,0 +1,238 @@
+.predictions-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.predictions-header {
+  margin-bottom: 32px;
+}
+
+.predictions-header .page-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.stat-card svg {
+  flex-shrink: 0;
+}
+
+.stat-blue svg { color: var(--neon-blue); }
+.stat-green svg { color: var(--neon-green); }
+.stat-red svg { color: var(--neon-red); }
+.stat-purple svg { color: var(--neon-purple); }
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.match-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid var(--glass-border);
+}
+
+.tab {
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--text-secondary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab:hover,
+.tab.active {
+  color: var(--neon-purple);
+  border-bottom-color: var(--neon-purple);
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.prediction-match-card {
+  padding: 24px;
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.prediction-match-card:hover {
+  background: rgba(176, 38, 255, 0.1);
+  border-color: var(--neon-purple);
+  transform: translateY(-5px);
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.match-status {
+  padding: 4px 12px;
+  background: rgba(0, 255, 255, 0.2);
+  border: 1px solid var(--neon-cyan);
+  border-radius: 12px;
+  color: var(--neon-cyan);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.match-time {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.match-teams {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.team {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.team-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--gradient-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-neon-purple);
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.team-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+.team-odds {
+  font-size: 18px;
+  color: var(--neon-purple);
+  font-weight: 700;
+}
+
+.vs-divider {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-muted);
+  padding: 0 8px;
+}
+
+.prediction-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-predict {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.team1-btn {
+  background: var(--gradient-blue);
+  color: var(--text-primary);
+}
+
+.team2-btn {
+  background: var(--gradient-purple);
+  color: var(--text-primary);
+}
+
+.btn-predict:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-neon-blue);
+}
+
+.team2-btn:hover {
+  box-shadow: var(--shadow-neon-purple);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .matches-grid {
+    grid-template-columns: 1fr;
+  }
+}

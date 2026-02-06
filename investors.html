@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gamer Hub Yatırımcı Paneli - Proje vizyonu, yatırım fırsatları ve iş planı">
+    <title>Yatırımcı Paneli - Gamer Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-gamepad"></i>
+                <span>Gamer Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="lobby.html" class="nav-link">Lobi & Forum</a></li>
+                <li><a href="guides.html" class="nav-link">Rehberler</a></li>
+                <li><a href="news.html" class="nav-link">Haberler</a></li>
+                <li><a href="stats.html" class="nav-link">İstatistikler</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-primary" id="loginBtn">
+                    <i class="fas fa-user"></i> Giriş Yap
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container" style="margin-top: 80px; padding: 40px 20px;">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-handshake"></i> Yatırımcı Paneli</h1>
+                <p>Gamer Hub'ın geleceği ve yatırım fırsatları</p>
+            </div>
+
+            <div class="investors-content">
+                <section class="vision-section">
+                    <h2><i class="fas fa-rocket"></i> Vizyonumuz</h2>
+                    <p>Gamer Hub, oyun topluluğunu bir araya getiren, kapsamlı bir platform olmayı hedefliyor. Binlerce oyuncuya hizmet veren, canlı yayınlar, lobi sistemi, rehberler ve istatistiklerle donatılmış modern bir oyun ekosistemi kuruyoruz.</p>
+                </section>
+
+                <section class="metrics-section">
+                    <h2><i class="fas fa-chart-bar"></i> Metrikler</h2>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <i class="fas fa-users"></i>
+                            <h3>10,000+</h3>
+                            <p>Aktif Kullanıcı</p>
+                        </div>
+                        <div class="metric-card">
+                            <i class="fas fa-gamepad"></i>
+                            <h3>500+</h3>
+                            <p>Aktif Lobi</p>
+                        </div>
+                        <div class="metric-card">
+                            <i class="fas fa-book"></i>
+                            <h3>200+</h3>
+                            <p>Rehber</p>
+                        </div>
+                        <div class="metric-card">
+                            <i class="fas fa-eye"></i>
+                            <h3>50K+</h3>
+                            <p>Günlük Görüntüleme</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="opportunities-section">
+                    <h2><i class="fas fa-briefcase"></i> Yatırım Fırsatları</h2>
+                    <div class="opportunities-grid">
+                        <div class="opportunity-card">
+                            <h3>Reklam Gelirleri</h3>
+                            <p>Yüksek trafikli platformda reklam alanları ile gelir modeli</p>
+                            <span class="opportunity-badge">Aktif</span>
+                        </div>
+                        <div class="opportunity-card">
+                            <h3>Premium Üyelik</h3>
+                            <p>Özel özellikler ve avantajlar sunan premium üyelik sistemi</p>
+                            <span class="opportunity-badge">Planlanıyor</span>
+                        </div>
+                        <div class="opportunity-card">
+                            <h3>Sponsorluklar</h3>
+                            <p>E-spor takımları ve oyun şirketleri ile sponsorluk anlaşmaları</p>
+                            <span class="opportunity-badge">Geliştiriliyor</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="contact-section">
+                    <h2><i class="fas fa-envelope"></i> İletişim</h2>
+                    <p>Yatırım fırsatları hakkında daha fazla bilgi almak için bizimle iletişime geçin.</p>
+                    <button class="btn-primary" onclick="contactInvestors()">
+                        <i class="fas fa-paper-plane"></i> İletişime Geç
+                    </button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        function contactInvestors() {
+            alert('Yatırım danışmanlığı için: investors@gamerhub.com\nTelefon: +90 XXX XXX XX XX');
+        }
+    </script>
+</body>
+</html>

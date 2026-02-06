@@ -1,0 +1,156 @@
+.not-found-page {
+  min-height: 100vh;
+  background: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.not-found-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.neon-glow-container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.neon-icon {
+  color: #00d4ff;
+  filter: drop-shadow(0 0 20px #00d4ff) drop-shadow(0 0 40px #00d4ff);
+  animation: pulse-glow 2s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% {
+    filter: drop-shadow(0 0 20px #00d4ff) drop-shadow(0 0 40px #00d4ff);
+  }
+  100% {
+    filter: drop-shadow(0 0 30px #00d4ff) drop-shadow(0 0 60px #00d4ff) drop-shadow(0 0 80px #00d4ff);
+  }
+}
+
+.not-found-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.neon-text-cyan {
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+}
+
+.neon-text-purple {
+  color: #b026ff;
+  text-shadow: 0 0 10px #b026ff, 0 0 20px #b026ff, 0 0 30px #b026ff;
+}
+
+.neon-text-gold {
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+}
+
+.not-found-description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.btn-home,
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid;
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: transparent;
+}
+
+.btn-home {
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.btn-home:hover {
+  background: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-back {
+  border-color: #b026ff;
+  box-shadow: 0 0 20px rgba(176, 38, 255, 0.3);
+}
+
+.btn-back:hover {
+  background: rgba(176, 38, 255, 0.1);
+  box-shadow: 0 0 30px rgba(176, 38, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #00d4ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00d4ff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .not-found-title {
+    font-size: 2.5rem;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+  }
+
+  .btn-home,
+  .btn-back {
+    width: 100%;
+    justify-content: center;
+  }
+}

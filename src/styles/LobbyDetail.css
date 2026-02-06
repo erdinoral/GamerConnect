@@ -1,0 +1,54 @@
+/* Lobby Detail specific styles */
+.lobby-detail-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+/* Scrollbar for chat */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: var(--neon-cyan);
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-purple);
+}
+
+/* Animation for speaking indicator */
+@keyframes pulse-speak {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.animate-pulse {
+  animation: pulse-speak 2s ease-in-out infinite;
+}
+
+/* Creator badge glow */
+@keyframes creator-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+  }
+}
+
+.shadow-neon-gold {
+  animation: creator-glow 2s ease-in-out infinite;
+}

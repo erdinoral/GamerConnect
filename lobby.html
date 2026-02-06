@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gamer Hub Lobi & Forum - Duo/Squad ara, sorular sor, toplulukla etkileşim kur">
+    <title>Lobi & Forum - Gamer Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-gamepad"></i>
+                <span>Gamer Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="lobby.html" class="nav-link active">Lobi & Forum</a></li>
+                <li><a href="guides.html" class="nav-link">Rehberler</a></li>
+                <li><a href="news.html" class="nav-link">Haberler</a></li>
+                <li><a href="stats.html" class="nav-link">İstatistikler</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-primary" id="loginBtn">
+                    <i class="fas fa-user"></i> Giriş Yap
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container" style="margin-top: 80px; padding: 40px 20px;">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-users"></i> Lobi & Forum</h1>
+                <p>Takım arkadaşı bul, sorular sor, toplulukla etkileşim kur</p>
+            </div>
+
+            <div class="lobby-layout">
+                <!-- Left Sidebar - Ad -->
+                <aside class="sidebar-left">
+                    <div class="ad-banner neon-border" style="height: 300px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <div class="ad-content">
+                            <span class="ad-label">Reklam</span>
+                            <p>300x300 Reklam Alanı</p>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="lobby-main">
+                    <!-- Tabs -->
+                    <div class="lobby-tabs">
+                        <button class="lobby-tab active" data-tab="duo">Duo/Squad Ara</button>
+                        <button class="lobby-tab" data-tab="forum">Forum</button>
+                    </div>
+
+                    <!-- Duo/Squad Section -->
+                    <div id="duoSection" class="tab-content active">
+                        <div class="section-header">
+                            <h2>Takım Arkadaşı İlanları</h2>
+                            <button class="btn-primary btn-post" onclick="requireLogin(() => showCreateLobbyModal())">
+                                <i class="fas fa-plus"></i> Yeni İlan
+                            </button>
+                        </div>
+                        <div class="lobby-list" id="lobbyList">
+                            <!-- Lobbies will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Forum Section -->
+                    <div id="forumSection" class="tab-content">
+                        <div class="section-header">
+                            <h2>Topluluk Soruları</h2>
+                            <button class="btn-primary btn-post" onclick="requireLogin(() => showCreatePostModal())">
+                                <i class="fas fa-plus"></i> Soru Sor
+                            </button>
+                        </div>
+                        <div class="forum-list" id="forumList">
+                            <!-- Forum posts will be loaded here -->
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Right Sidebar - Ad -->
+                <aside class="sidebar-right">
+                    <div class="ad-banner neon-border" style="height: 300px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <div class="ad-content">
+                            <span class="ad-label">Reklam</span>
+                            <p>300x300 Reklam Alanı</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Lobby Modal -->
+    <div id="createLobbyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('createLobbyModal')">&times;</span>
+            <h2>Yeni Lobi İlanı Oluştur</h2>
+            <form id="lobbyForm" onsubmit="createLobby(event)">
+                <input type="text" placeholder="Oyun Adı" required>
+                <select required>
+                    <option value="">Takım Boyutu Seç</option>
+                    <option value="duo">Duo (2 kişi)</option>
+                    <option value="squad">Squad (4 kişi)</option>
+                    <option value="team">Takım (5+ kişi)</option>
+                </select>
+                <textarea placeholder="Açıklama (Rank, Deneyim, vb.)" rows="4" required></textarea>
+                <button type="submit" class="btn-primary">İlanı Yayınla</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Post Modal -->
+    <div id="createPostModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('createPostModal')">&times;</span>
+            <h2>Yeni Soru Sor</h2>
+            <form id="postForm" onsubmit="createPost(event)">
+                <input type="text" placeholder="Başlık (örn: Bu build nasıl?)" required>
+                <textarea placeholder="Sorunuzu detaylı şekilde yazın..." rows="6" required></textarea>
+                <select>
+                    <option value="">Kategori Seç (Opsiyonel)</option>
+                    <option value="build">Build Soruları</option>
+                    <option value="strategy">Strateji</option>
+                    <option value="general">Genel</option>
+                </select>
+                <button type="submit" class="btn-primary">Gönder</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="lobby.js"></script>
+</body>
+</html>
