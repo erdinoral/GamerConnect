@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "./static/css/main.6e2edc00.css",
-    "main.js": "./static/js/main.e786b28d.js",
-    "index.html": "./index.html"
+    "main.css": "/GamerConnect/static/css/main.401fed91.css",
+    "main.js": "/GamerConnect/static/js/main.4bdf8f45.js",
+    "index.html": "/GamerConnect/index.html",
+    "main.401fed91.css.map": "/GamerConnect/static/css/main.401fed91.css.map",
+    "main.4bdf8f45.js.map": "/GamerConnect/static/js/main.4bdf8f45.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e2edc00.css",
-    "static/js/main.e786b28d.js"
+    "static/css/main.401fed91.css",
+    "static/js/main.4bdf8f45.js"
   ]
 }
